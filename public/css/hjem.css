@@ -1,0 +1,17 @@
+.hidden {
+    display: none;
+}
+
+.velkomstMelding, .navnForm {
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.tall {
+    text-align: center;
+    font-size: 72px;
+}
+
+.takk {
+    text-align: center;
+}
