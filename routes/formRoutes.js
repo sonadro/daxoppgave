@@ -14,7 +14,7 @@ router.post('/form-update', formController.form_updateOne);
 
 router.post('/form-delete', formController.form_deleteOne);
 
-router.post('/form-getAllIds', formController.form_getAllIds);
+router.post('/form-readAll', formController.form_getAllIds);
 
 // export
 module.exports = router;

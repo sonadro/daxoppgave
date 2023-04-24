@@ -107,14 +107,17 @@ module.exports.form_deleteOne = async (req, res) => {
 module.exports.form_getAllIds = async (req, res) => {
     try {
         const allDocs = await formDocument.find({ });
-        let allIds = [];
-        allDocs.forEach(doc => {
-            allIds.push(doc._id.toString());
-        });
+
+        let alleNavn = [];
+
+        for (let i = 0; i < allDocs.length; i++) {
+            const navn = allDocs[i].navn;
+            alleNavn.push(navn);
+        };
 
         res.status(200).send({
-            status: 'fetched all ids',
-            allIds
+            status: 'fetched all names',
+            alleNavn
         });
     } catch(err) {
         console.error(err);
