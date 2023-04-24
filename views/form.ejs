@@ -1,0 +1,64 @@
+<%- include('partials/header') %>
+
+    <h1>Forms:</h1>
+
+    <h2>Upload:</h2>
+    <form id="uploadForm">
+        <label for="input1">Input 1:</label>
+        <input id="input1" type="text" name="input1">
+
+        <label for="input2">Input 2:</label>
+        <input id="input2" type="number" name="input2">
+
+        <button type="submit">Upload document</button>
+
+        <p id="uploadStatus"></p>
+    </form>
+
+    <h2>Read one:</h2>
+    <form id="readForm">
+        <label for="idInput">Dokument id:</label>
+        <input name="idInput" id="idInput" type="text">
+
+        <button type="submit">Read Document</button>
+
+        <p id="readStatus"></p>
+    </form>
+
+    <h2>Update one:</h2>
+    <form id="updateForm">
+        <label for="updateId">Document id:</label>
+        <input name="updateId" id="updateId" type="text">
+
+        <h3>Ny data:</h3>
+        <label for="nyInput1">Input 1:</label>
+        <input id="nyInput1" type="text" name="nyInput1">
+
+        <label for="nyInput2">Input 2:</label>
+        <input id="nyInput2" type="number" name="nyInput2">
+
+        <button type="submit">Update document</button>
+
+        <p id="updateStatus"></p>
+    </form>
+
+    <h2>Delete one:</h2>
+    <form id="deleteForm">
+        <label for="deleteId">Document id</label>
+        <input name="deleteId" type="text" id="deleteId">
+
+        <button type="submit">Delete document</button>
+
+        <p id="deleteStatus"></p>
+    </form>
+
+    <h2>Get all document ids:</h2>
+    <form id="getAllIds">
+        <button type="submit">Get all ids</button>
+        <p id="allIdResult"></p>
+    </form>
+
+    <!-- scripts -->
+    <script src="/js/form.js"></script>
+
+<%- include('partials/footer') %>
