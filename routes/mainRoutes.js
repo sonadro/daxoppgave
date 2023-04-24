@@ -6,6 +6,5 @@ const router = Router();
 
 // routes
 router.get('/', mainController.home_get);
-router.get('/form', mainController.form_get);
 
 module.exports = router;
