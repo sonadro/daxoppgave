@@ -7,7 +7,11 @@
     font-size: 1.2rem;
 }
 
-.tall {
+.tall h1 {
+    text-align: center;
+}
+
+.tallElement {
     text-align: center;
     font-size: 72px;
 }
