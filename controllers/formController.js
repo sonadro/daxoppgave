@@ -4,13 +4,33 @@ const mongoose = require('mongoose');
 const { formDocument } = require('../models/form');
 
 // controller
-module.exports.form_post = (req, res) => {
+module.exports.form_post = async (req, res) => {
     const data = req.body;
 
     const document = new formDocument(data.parcel);
     
     // save document
     try {
+        const allDocs = await formDocument.aggregate([
+            {
+                '$project': {
+                    'navn': true, 
+                    '_id': false
+                }
+            }
+        ]);
+
+        for(let i = 0; i < allDocs.length; i++) {
+            const navn = allDocs[i].navn;
+
+            if (navn === data.parcel.navn) {
+                res.status(200).send({
+                    status: 'Navnet finnes allerede i databasen!'
+                });
+                return;
+            }
+        }
+
         document.save();
         res.status(200).send({
             status: 'Document has been uploaded'

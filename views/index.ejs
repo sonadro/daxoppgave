@@ -1,7 +1,27 @@
 <%- include('partials/header') %>
 
+    <!-- css -->
+    <link rel="stylesheet" href="/css/hjem.css">
+
     <div id="main">
-        <h1>Index</h1>
+        <p class="velkomstMelding hidden">Velkommen, vi ønsker deg alt som er godt, <span class="velkomstNavn"></span>!</p>
     </div>
+
+    <form class="navnForm">
+        <label for="navn">Navn:</label>
+        <input id="navn" type="text" name="navn">
+    </form>
+
+    <div class="tall">
+        <h1 class="tallElement">10</h1>
+    </div>
+
+    <div class="takk">
+        <h2>Takk til alle som har besøkt nettstedet:</h2>
+    </div>
+
+    <!-- skript -->
+    <script src="/js/navnForm.js" defer></script>
+    <script src="/js/tilfeldigTall.js" defer></script>
 
 <%- include('partials/footer') %>

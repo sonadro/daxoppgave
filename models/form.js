@@ -2,11 +2,11 @@
 const mongoose = require('mongoose');
 
 const formSchema = new mongoose.Schema({
-    input1: {
+    navn: {
         type: String
     },
-    input2: {
-        type: Number
+    dato: {
+        type: String
     }
 });
 
