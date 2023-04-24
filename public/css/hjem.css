@@ -7,7 +7,7 @@
     font-size: 1.2rem;
 }
 
-.tall h1 {
+.tall {
     text-align: center;
 }
 
@@ -26,4 +26,10 @@
     width: 700px;
     margin-left: auto;
     margin-right: auto;
+}
+
+.lykkeFarge {
+    text-align: center;
+    font-size: 26px;
+    font-weight: bold;
 }

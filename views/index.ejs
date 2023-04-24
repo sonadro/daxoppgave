@@ -16,6 +16,17 @@
     <div class="tall">
         <h1>Ditt lykketall dette minuttet:</h1>
         <h2 class="tallElement"></h2>
+
+        <form class="gjettTallForm">
+            <label for="gjettInput">Gjett det neste lykketallet ditt:</label>
+            <input id="tallInput" type="number" min="0" max="10">
+            <button type="submit">Gjett!</button>
+            <p class="gjettTallTekst hidden">Tallet du gjettet: <span class="dittTall"></span></p>
+        </form>
+    </div>
+
+    <div class="lykkeFarge hidden">
+        <p>DETTE ER DIN NYE LYKKEFARGE!</p>
     </div>
 
     <div class="takk">
